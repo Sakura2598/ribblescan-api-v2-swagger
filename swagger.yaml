@@ -185,11 +185,7 @@ paths:
                       $ref: "#/components/schemas/TokenTransfer"
                   next_page_params:
                     type: object
-                    example:
-                      {
-                        "block_number": 27170298,
-                        "index": 0
-                      }
+                    example: { "block_number": 27170298, "index": 0 }
         "400":
           description: bad input parameter
 
@@ -218,7 +214,7 @@ paths:
                       {
                         "block_number": 27170298,
                         "index": 0,
-                        "transaction_index": 0
+                        "transaction_index": 0,
                       }
 
   /main-page/transactions:
@@ -1443,7 +1439,7 @@ paths:
                   next_page_params:
                     type: object
                     example: { "index": 1, "items_count": 50 }
-  
+
   /proxy/account-abstraction/status:
     get:
       summary: get account abstraction indexing status
@@ -1466,13 +1462,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/v1CelestiaBlob'
+                $ref: "#/components/schemas/v1CelestiaBlob"
         default:
           description: An unexpected error response.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/rpcStatus'
+                $ref: "#/components/schemas/rpcStatus"
       parameters:
         - name: height
           in: query
@@ -1501,13 +1497,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/v1CelestiaL2BatchMetadata'
+                $ref: "#/components/schemas/v1CelestiaL2BatchMetadata"
         default:
           description: An unexpected error response.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/rpcStatus'
+                $ref: "#/components/schemas/rpcStatus"
       parameters:
         - name: height
           in: query
@@ -1539,13 +1535,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/v1HealthCheckResponse'
+                $ref: "#/components/schemas/v1HealthCheckResponse"
         default:
           description: An unexpected error response.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/rpcStatus'
+                $ref: "#/components/schemas/rpcStatus"
       parameters:
         - name: service
           in: query
@@ -2507,12 +2503,13 @@ components:
           example: "domain.eth"
         metadata:
           type: object
-          example: {
-                "slug": "tag_slug",
-                "name": "Tag name",
-                "tagType": "name",
-                "ordinal": 0,
-                "meta": {}
+          example:
+            {
+              "slug": "tag_slug",
+              "name": "Tag name",
+              "tagType": "name",
+              "ordinal": 0,
+              "meta": {},
             }
         is_contract:
           type: boolean
@@ -2801,7 +2798,6 @@ components:
           example: "1"
         token_instance:
           $ref: "#/components/schemas/NFTInstance"
-
 
     TotalERC1155:
       required:
@@ -3764,9 +3760,9 @@ components:
         finished_past_indexing:
           type: boolean
         v06:
-          $ref: '#/components/schemas/v1EntryPointIndexerStatus'
+          $ref: "#/components/schemas/v1EntryPointIndexerStatus"
         v07:
-          $ref: '#/components/schemas/v1EntryPointIndexerStatus'
+          $ref: "#/components/schemas/v1EntryPointIndexerStatus"
 
     v1EntryPointIndexerStatus:
       properties:
@@ -3787,11 +3783,11 @@ components:
         - NOT_SERVING
         - SERVICE_UNKNOWN
       default: UNKNOWN
-      description: ' - SERVICE_UNKNOWN: Used only by the Watch method.'
+      description: " - SERVICE_UNKNOWN: Used only by the Watch method."
     protobufAny:
       type: object
       properties:
-        '@type':
+        "@type":
           type: string
       additionalProperties: {}
     rpcStatus:
@@ -3806,7 +3802,7 @@ components:
           type: array
           items:
             type: object
-            $ref: '#/components/schemas/protobufAny'
+            $ref: "#/components/schemas/protobufAny"
     v1CelestiaBlob:
       type: object
       properties:
@@ -3866,12 +3862,12 @@ components:
           type: array
           items:
             type: object
-            $ref: '#/components/schemas/v1CelestiaBlobId'
+            $ref: "#/components/schemas/v1CelestiaBlobId"
     v1HealthCheckResponse:
       type: object
       properties:
         status:
-          $ref: '#/components/schemas/HealthCheckResponseServingStatus'
+          $ref: "#/components/schemas/HealthCheckResponseServingStatus"
 
   examples:
     TokenTransferLarge1155Batch:
