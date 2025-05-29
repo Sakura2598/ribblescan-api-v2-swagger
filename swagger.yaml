@@ -6,7 +6,7 @@ servers:
   - url: https://{server}/api/v2/
     variables:
       server:
-        default: ribblescan.io
+        default: ribblescan.io/poa/core
 
 info:
   description: API for Ribblescan web app
