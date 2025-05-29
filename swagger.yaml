@@ -6,14 +6,14 @@ servers:
   - url: http://{server}/api/v2/
     variables:
       server:
-        default: blockscout.com/poa/core
+        default: ribblescan.io/poa/core
   - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/NIKITOSING4/CoreBlockScoutAPI/1.0.0
+    url: #
 
 info:
-  description: API for BlockScout web app
+  description: API for Ribblescan web app
   version: "1.0.0"
-  title: BlockScout API
+  title: Ribblescan API
   contact:
     email: you@your-company.com
   license:
@@ -3852,7 +3852,7 @@ components:
         l2BatchTxCount:
           type: integer
           format: int64
-        l2BlockscoutUrl:
+        l2RibblescanUrl:
           type: string
         l1TxHash:
           type: string
