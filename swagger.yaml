@@ -1,7 +1,7 @@
 openapi: 3.0.0
 tags:
   - name: default
-  - name: CelestiaService
+  - name: ribblescanservice
 servers:
   - url: http://{server}/api/v2/
     variables:
