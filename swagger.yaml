@@ -1,21 +1,19 @@
 openapi: 3.0.0
 tags:
   - name: default
-  - name: ribblescanservice
+  - name: CelestiaService
 servers:
-  - url: http://{server}/api/v2/
+  - url: https://{server}/api/v2/
     variables:
       server:
-        default: ribblescan.io/poa/core
-  - description: SwaggerHub API Auto Mocking
-    url: #
+        default: ribblescan.io
 
 info:
   description: API for Ribblescan web app
   version: "1.0.0"
   title: Ribblescan API
   contact:
-    email: you@your-company.com
+    email: contact@ribblechain.com
   license:
     name: Apache 2.0
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -3174,7 +3172,7 @@ components:
           example: "83606435600.3635"
         icon_url:
           type: string
-          example: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+          example: "https://ribblechain.com/assets/images/explorer/logo64.png"
         name:
           type: string
           example: "Tether USD"
