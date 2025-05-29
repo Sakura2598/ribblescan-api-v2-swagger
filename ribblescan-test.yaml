@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: Ribblescan API
+  version: "1.0.0"
+servers:
+  - url: https://ribblescan.io/api/v2/
+paths:
+  /search:
+    get:
+      summary: search
+      operationId: search
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+            example: "USDT"
+      responses:
+        "200":
+          description: search response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
